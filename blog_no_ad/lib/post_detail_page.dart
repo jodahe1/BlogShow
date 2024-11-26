@@ -41,7 +41,7 @@ class PostDetailPage extends StatelessWidget {
       ),
       backgroundColor: isSelected
           ? Colors.blue[100]
-          : Colors.white, // Keep the color for the selected post
+          : Colors.white, 
     );
   }
 

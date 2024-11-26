@@ -78,7 +78,7 @@ class _PostsPageState extends State<PostsPage> {
               },
               child: ListView.builder(
                 controller: _scrollController,
-                itemCount: posts.length + 1, // Add 1 for the loading indicator at the end
+                itemCount: posts.length + 1, 
                 itemBuilder: (context, index) {
                   if (index == posts.length) {
                     return isFetchingMore
@@ -96,7 +96,7 @@ class _PostsPageState extends State<PostsPage> {
                       setState(() {
                         selectedIndex = index;
                       });
-                      // Navigate to detailed view
+                    
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -105,7 +105,7 @@ class _PostsPageState extends State<PostsPage> {
                       );
                     },
                     child: AnimatedScale(
-                      scale: isSelected ? 1.05 : 1.0, // Pop effect when selected
+                      scale: isSelected ? 1.05 : 1.0,
                       duration: Duration(milliseconds: 200),
                       curve: Curves.easeOut,
                       child: Card(
